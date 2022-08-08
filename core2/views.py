@@ -18,3 +18,9 @@ class ProfileList(View):
     def get(self, request, *args, **kwargs):
         profiles=request.user.profiles.all()
         return render(request,'profileList.html',{'profiles':profiles})
+
+
+
+class ProfileCreate(View):
+    def get(self,request,*args, **kwargs):
+        return render(request,'profileCreate.html')
